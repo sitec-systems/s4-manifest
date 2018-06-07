@@ -1,0 +1,90 @@
+#!/bin/bash
+
+cleanup() {
+  unset OPTIND OPTARG BUILDDIR CURDIR
+  unset opts builddir fullsetup
+  unset usage
+  unset machine
+}
+
+usage() {
+  cat <<EOF
+[BUILDDIR=<BUILDDIR>] source ${BASH_SOURCE[0]} [-f] [-h]
+
+Command preares your build environment for the yocto build.
+  -f: Performing a full bootstrap. Creates the build directory and copies
+      the configurations templates for bitbake into the dedicated location.
+      The builddirectory is take from the BUILDDIR environment variable. If this
+      variable isn't set by the user the default value "build" will be taken.
+  -h: Show help text
+
+Environment variables:
+  BUILDDIR=<BUILDDIR>: Uses another build directory instead of build. You need to set this
+                       variable before every source of the script.
+EOF
+}
+
+if [ "$0" = "$BASH_SOURCE" ]; then
+  cat <<EOF
+You need to source this script!!!
+
+source ${BASH_SOURCE[0]} [-f] [-h]
+EOF
+exit 1
+fi
+
+CURDIR=$(pwd)
+
+Builddir="build"
+
+if [ ! $BUILDDIR ]; then
+  BUILDDIR="build"
+fi
+
+while getopts "hf" opts; do
+  case $opts in
+    h)
+      usage
+      cleanup
+      return 0
+      ;;
+    f)
+      fullsetup=1
+      ;;
+    *)
+      usage
+      cleanup
+      return 1
+      ;;
+
+    esac
+  done
+
+  echo "Using builddirectory $BUILDDIR"
+
+  machine=s4
+
+  echo "Using machine $machine"
+  cat << EOF
+
+For build sitec-systems image use the command:
+  bitbake sitec-image
+EOF
+
+# Publish yocto build system environment
+cd "src/poky/"
+. ./oe-init-build-env $CURDIR/$BUILDDIR > /dev/null
+cd $CURDIR
+
+if [ $fullsetup ]; then
+  echo "Doing full setup"
+  if [ -d $BUILDDIR ]; then
+    rm -rf $BUILDDIR
+  fi
+  mkdir -p $BUILDDIR/conf
+  cp .repo/manifests/config/$machine/local.conf $BUILDDIR/conf/
+  cp .repo/manifests/config/$machine/bblayers.conf $BUILDDIR/conf/
+fi
+cd $BUILDDIR
+
+cleanup
