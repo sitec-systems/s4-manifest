@@ -50,4 +50,4 @@ http://www.yoctoproject.org/docs/2.2.1/yocto-project-qs/yocto-project-qs.html
 
 If you find any bugs please report them here
 
-https://github.com/sitec-systems/sitec-bsp-manifest/issues
+https://github.com/sitec-systems/s4-manifest/issues
