@@ -6,6 +6,8 @@
   <remote fetch="https://github.com" name="github"/>
   <remote fetch="git://git.openembedded.org" name="oe"/>
   <remote fetch="http://git.yoctoproject.org/git" name="yocto"/>
+  <remote fetch="http://git.yoctoproject.org/git" name="yocto"/>
+  <remote fetch="https://172.16.40.5/redmine/projekte" name="internal" />
 
   <project remote="yocto" revision="02251a18bcf735ec2c18b594cbed033a9069f05c"
     name="poky" path="src/poky"/>
@@ -20,9 +22,9 @@
   <project remote="github" revision="b42566cbe2e087b338a8a73f1a16b9a9a13d419c"
     name="intel-iot-devkit/meta-iot-cloud" path="src/meta-iot-cloud"/>
 
-  <project remote="github" revision="refs/tags/1.6.0" name="sitec-systems/meta-sitec-score" path="src/meta-sitec-score" />
-  <project remote="github" revision="refs/tags/1.3.0" name="sitec-systems/meta-sitec-s4" path="src/meta-sitec-s4" />
-  <project remote="github" revision="refs/tags/1.10.0" name="sitec-systems/meta-sitec-bsp" path="src/meta-sitec-bsp">
+  <project remote="internal" revision="refs/tags/1.6.0" name="15_0020/pub_scm_15_0020.git" path="src/meta-sitec-score" />
+  <project remote="internal" revision="refs/tags/1.3.0" name="16_0013/pub_scm_16_0013.git" path="src/meta-sitec-s4" />
+  <project remote="internal" revision="refs/tags/1.10.0" name="16_0012/meta-sitec-bsp.git" path="src/meta-sitec-bsp">
     <copyfile  dest="bootstrap" src="../../.repo/manifests/bootstrap"/>
   </project>
 
