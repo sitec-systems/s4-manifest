@@ -22,7 +22,7 @@ Create a working directory and use `repo` to intialize your build environment.
 
 	$ mkdir <WORKING>
 	$ cd <WORKING>
-	$ repo init -u https://github.com/sitec-systems/sitec-bsp-manifest.git
+	$ repo init -u https://172.16.40.5/redmine/projekte/17_0006/17_0006_s4/s4-manifest.git
 	$ repo sync
 
 Now you can setup your build environment using the `bootstrap` script. For the first time run:
