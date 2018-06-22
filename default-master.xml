@@ -18,7 +18,9 @@
   <project remote="yocto" revision="9edf7d5aa5bdcf9afc4365fd1d85feca72b4ef1a"
     name="meta-java" path="src/meta-java"/>
   <project remote="github" revision="b42566cbe2e087b338a8a73f1a16b9a9a13d419c"
-    name="intel-iot-devkit/meta-iot-cloud" path="src/meta-iot-cloud"/>
+	   name="intel-iot-devkit/meta-iot-cloud" path="src/meta-iot-cloud"/>
+  <project remote="yocto" revision="krogoth"
+	   name="meta-virtualization" path="src/meta-virtualization"/>
 
   <project remote="github" revision="master" name="sitec-systems/meta-sitec-score" path="src/meta-sitec-score" />
   <project remote="github" revision="master" name="sitec-systems/meta-sitec-s4" path="src/meta-sitec-s4" />

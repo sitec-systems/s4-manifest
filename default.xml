@@ -8,17 +8,19 @@
   <remote fetch="http://git.yoctoproject.org/git" name="yocto"/>
 
   <project remote="yocto" revision="02251a18bcf735ec2c18b594cbed033a9069f05c"
-    name="poky" path="src/poky"/>
+	   name="poky" path="src/poky"/>
   <project remote="github" revision="a3a91dc1ef6d1dc42e284248b09dd474ba2cef80"
-    name="freescale/meta-fsl-arm" path="src/meta-fsl-arm"/>
+	   name="freescale/meta-fsl-arm" path="src/meta-fsl-arm"/>
   <project remote="github" revision="1100037b9becaaa5749602bca9d63693119c4585"
-    name="meta-qt5/meta-qt5" path="src/meta-qt5"/>
+	   name="meta-qt5/meta-qt5" path="src/meta-qt5"/>
   <project remote="oe" revision="247b1267bbe95719cd4877d2d3cfbaf2a2f4865a"
-    name="meta-openembedded" path="src/meta-openembedded"/>
+	   name="meta-openembedded" path="src/meta-openembedded"/>
   <project remote="yocto" revision="9edf7d5aa5bdcf9afc4365fd1d85feca72b4ef1a"
-    name="meta-java" path="src/meta-java"/>
+	   name="meta-java" path="src/meta-java"/>
   <project remote="github" revision="b42566cbe2e087b338a8a73f1a16b9a9a13d419c"
-    name="intel-iot-devkit/meta-iot-cloud" path="src/meta-iot-cloud"/>
+	   name="intel-iot-devkit/meta-iot-cloud" path="src/meta-iot-cloud"/>
+  <project remote="yocto" revision="krogoth"
+	   name="meta-virtualization" path="src/meta-virtualization"/>
 
   <project remote="github" revision="refs/tags/1.6.0" name="sitec-systems/meta-sitec-score" path="src/meta-sitec-score" />
   <project remote="github" revision="refs/tags/1.3.0" name="sitec-systems/meta-sitec-s4" path="src/meta-sitec-s4" />
