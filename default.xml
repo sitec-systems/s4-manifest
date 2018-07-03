@@ -24,7 +24,7 @@
 
   <project remote="github" revision="refs/tags/1.6.0" name="sitec-systems/meta-sitec-score" path="src/meta-sitec-score" />
   <project remote="github" revision="refs/tags/1.3.0" name="sitec-systems/meta-sitec-s4" path="src/meta-sitec-s4" />
-  <project remote="github" revision="refs/tags/1.10.0" name="sitec-systems/meta-sitec-bsp" path="src/meta-sitec-bsp">
+  <project remote="github" revision="refs/tags/1.11.0" name="sitec-systems/meta-sitec-bsp" path="src/meta-sitec-bsp">
     <copyfile  dest="bootstrap" src="../../.repo/manifests/bootstrap"/>
   </project>
 
