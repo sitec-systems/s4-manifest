@@ -25,7 +25,13 @@ Create a working directory and use `repo` to intialize your build environment.
 	$ repo init -u https://github.com/sitec-systems/s4-manifest.git -b oss
 	$ repo sync
 
-Now you can setup your build environment using the `bootstrap` script. For the first time run:
+You can use a docker container for building the BSP image. Just build the container image with the
+following command
+
+    $ docker build -t sitec/oe .
+
+Now you can enter the build environment with the script `run.sh`. After that enter the yocto
+build environment by using the `bootstrap` script. For the first time run:
 
 	$ source bootstrap -f
 
