@@ -1,31 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-  <default sync-j="4"/>
+    <default sync-j="4"/>
 
-  <remote fetch="https://github.com" name="github"/>
-  <remote fetch="git://git.openembedded.org" name="oe"/>
-  <remote fetch="http://git.yoctoproject.org/git" name="yocto"/>
+    <remote fetch="https://github.com" name="github"/>
+    <remote fetch="git://git.openembedded.org" name="oe"/>
+    <remote fetch="http://git.yoctoproject.org/git" name="yocto"/>
 
-  <project remote="yocto" revision="02251a18bcf735ec2c18b594cbed033a9069f05c"
-	   name="poky" path="src/poky"/>
-  <project remote="github" revision="a3a91dc1ef6d1dc42e284248b09dd474ba2cef80"
-	   name="freescale/meta-fsl-arm" path="src/meta-fsl-arm"/>
-  <project remote="github" revision="1100037b9becaaa5749602bca9d63693119c4585"
-	   name="meta-qt5/meta-qt5" path="src/meta-qt5"/>
-  <project remote="oe" revision="247b1267bbe95719cd4877d2d3cfbaf2a2f4865a"
-	   name="meta-openembedded" path="src/meta-openembedded"/>
-  <project remote="yocto" revision="9edf7d5aa5bdcf9afc4365fd1d85feca72b4ef1a"
-	   name="meta-java" path="src/meta-java"/>
-  <project remote="github" revision="b42566cbe2e087b338a8a73f1a16b9a9a13d419c"
-	   name="intel-iot-devkit/meta-iot-cloud" path="src/meta-iot-cloud"/>
-  <project remote="yocto" revision="krogoth"
-	   name="meta-virtualization" path="src/meta-virtualization"/>
+    <project remote="yocto" revision="02251a18bcf735ec2c18b594cbed033a9069f05c"
+        name="poky" path="src/poky"/>
+    <project remote="github" revision="a3a91dc1ef6d1dc42e284248b09dd474ba2cef80"
+        name="freescale/meta-fsl-arm" path="src/meta-fsl-arm"/>
+    <project remote="github" revision="1100037b9becaaa5749602bca9d63693119c4585"
+        name="meta-qt5/meta-qt5" path="src/meta-qt5"/>
+    <project remote="oe" revision="247b1267bbe95719cd4877d2d3cfbaf2a2f4865a"
+        name="meta-openembedded" path="src/meta-openembedded"/>
+    <project remote="yocto" revision="9edf7d5aa5bdcf9afc4365fd1d85feca72b4ef1a"
+        name="meta-java" path="src/meta-java"/>
+    <project remote="github" revision="b42566cbe2e087b338a8a73f1a16b9a9a13d419c"
+        name="intel-iot-devkit/meta-iot-cloud" path="src/meta-iot-cloud"/>
+    <project remote="yocto" revision="krogoth"
+        name="meta-virtualization" path="src/meta-virtualization"/>
 
-  <project remote="github" revision="refs/tags/1.10.0" name="sitec-systems/meta-sitec-score" path="src/meta-sitec-score" />
-  <project remote="github" revision="refs/tags/1.5.0" name="sitec-systems/meta-sitec-s4" path="src/meta-sitec-s4" />
-  <project remote="github" revision="refs/tags/1.13.0" name="sitec-systems/meta-sitec-bsp" path="src/meta-sitec-bsp">
-    <copyfile  dest="bootstrap" src="../../.repo/manifests/bootstrap"/>
-  </project>
+    <project remote="github" revision="refs/tags/1.11.1" name="sitec-systems/meta-sitec-score" path="src/meta-sitec-score" />
+    <project remote="github" revision="refs/tags/1.5.0" name="sitec-systems/meta-sitec-s4" path="src/meta-sitec-s4" />
+    <project remote="github" revision="refs/tags/1.13.0" name="sitec-systems/meta-sitec-bsp" path="src/meta-sitec-bsp"/>
+
+    <project remote="internal" revision="master" name="17_0006/17_0006_s4/s4-manifest.git" path="src/s4-manifest">
+        <linkfile  dest="bootstrap" src="bootstrap"/>
+        <linkfile  dest="Dockerfile" src="Dockerfile"/>
+        <linkfile  dest="run.sh" src="run.sh"/>
+    </project>
 
 </manifest>
