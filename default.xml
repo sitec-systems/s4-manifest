@@ -26,7 +26,7 @@
     <project remote="github" revision="refs/tags/1.5.0" name="sitec-systems/meta-sitec-s4" path="src/meta-sitec-s4" />
     <project remote="github" revision="refs/tags/1.13.0" name="sitec-systems/meta-sitec-bsp" path="src/meta-sitec-bsp"/>
 
-    <project remote="github" revision="master" name="sitec-systems/s4-manifest.git" path="src/s4-manifest">
+    <project remote="github" revision="oss" name="sitec-systems/s4-manifest.git" path="src/s4-manifest">
         <linkfile  dest="bootstrap" src="bootstrap"/>
         <linkfile  dest="Dockerfile" src="Dockerfile"/>
         <linkfile  dest="run.sh" src="run.sh"/>
